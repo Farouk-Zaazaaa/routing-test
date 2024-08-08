@@ -1,0 +1,62 @@
+<h1 class="w-50 mx-auto bg  text-center">Modal test</h1>
+
+<div class="container">
+  <div class="row g-4">
+    <div class="col-md-4" (click)="open('mr_Pants.jpg')">
+      <div class="item">
+        <img src="./assets/images/mr_Pants.jpg" class="w-100" alt="">
+      
+      </div>
+    </div>
+    
+    <div class="col-md-4" (click)="open('test-photo.jpg')">
+      <div class="item">
+        <img src="./assets/images/test-photo.jpg" class="w-100" alt="">
+      
+      </div>
+    </div>
+    
+    <div class="col-md-4" (click)="open('test-2-photo.webp')">
+      <div class="item">
+        <img src="./assets/images/test-2-photo.webp" class="w-100" alt="">
+      
+      </div>
+    </div>
+
+    <div class="col-md-4" (click)="open('test-photo.jpg')">
+      <div class="item">
+        <img src="./assets/images/test-photo.jpg" class="w-100" alt="">
+      
+      </div>
+    </div>
+
+    <div class="col-md-4" (click)="open('test-2-photo.webp')">
+      <div class="item">
+        <img src="./assets/images/test-2-photo.webp" class="w-100" alt="">
+      
+      </div>
+    </div>
+
+    <div class="col-md-4" (click)="open('mr_Pants.jpg')">
+      <div class="item">
+        <img src="./assets/images/mr_Pants.jpg" class="w-100" alt="">
+      
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+@if (isClicked == true) {
+  <div class="lightbox-container d-flex justify-content-center align-items-center position-fixed start-0 end-0 top-0 bottom-0">
+    <div class="lightbox-item position-relative d-flex align-items-center justify-content-between mt-4">
+      <img [src]="imgSrc" alt="" class="w-75 mt-3 mx-auto rounded-3">
+      <i class="fa-regular fa-circle-xmark fs-1" (click)="close()"></i>
+    </div>
+  </div>
+}
+
+<!-- .lightbox-container {
+  background-color: #0101018a;
+} -->
